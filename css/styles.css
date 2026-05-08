@@ -204,10 +204,6 @@ h3 {
   line-height: var(--line-height-heading);
 }
 
-p {
-  max-width: 60ch;
-}
-
 .text-emphasis {
   font-weight: var(--font-weight-semibold);
   color: inherit;
@@ -556,17 +552,18 @@ p {
 }
 
 .chapter-intro__title {
-  max-width: 12ch;
   font-size: var(--font-size-heading-md);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
   text-wrap: balance;
+  text-align: center;
 }
 
 .chapter-intro__text {
   font-size: var(--font-size-body-md);
   font-weight: var(--font-weight-light);
   line-height: var(--line-height-compact);
+  text-align: center;
 }
 
 .chapter-intro__media {
@@ -797,7 +794,6 @@ p {
 .schedule__header {
   display: grid;
   gap: var(--space-lg);
-  width: min(100%, var(--measure-reading));
 }
 
 .schedule__eyebrow,
@@ -817,7 +813,6 @@ p {
 }
 
 .schedule__title {
-  max-width: 11ch;
   font-size: var(--font-size-heading-md);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
@@ -826,7 +821,6 @@ p {
 }
 
 .schedule__intro {
-  max-width: 34ch;
   font-size: var(--font-size-body-sm);
   font-weight: var(--font-weight-light);
   line-height: var(--line-height-compact);
@@ -854,7 +848,6 @@ p {
 }
 
 .schedule__item-title {
-  max-width: 16ch;
   font-size: var(--font-size-heading-sm);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
@@ -863,7 +856,6 @@ p {
 }
 
 .schedule__item-text {
-  max-width: 29ch;
   font-size: var(--font-size-body-sm);
   font-weight: var(--font-weight-light);
   line-height: var(--line-height-compact);
@@ -887,7 +879,6 @@ p {
 .menu {
   width: min(100% - (2 * var(--content-gutter)), var(--max-content-width));
   margin-inline: auto;
-  padding-block: var(--section-padding-y-light-mobile);
   display: grid;
   gap: clamp(4rem, 10vw, 6rem);
 }
@@ -918,20 +909,12 @@ p {
   text-wrap: balance;
 }
 
-.menu__title {
-  max-width: 14ch;
-}
-
 .menu__intro,
 .gifts__intro {
   font-size: var(--font-size-body-sm);
   font-weight: var(--font-weight-light);
   line-height: var(--line-height-compact);
   color: var(--color-black);
-}
-
-.menu__intro {
-  max-width: 38ch;
 }
 
 .menu__grid {
@@ -953,16 +936,11 @@ p {
   text-wrap: balance;
 }
 
-.menu__category-note {
-  max-width: 26ch;
-}
-
 .menu__list {
   display: grid;
   gap: var(--space-md);
 }
 
-.menu > .section-divider,
 .gifts > .section-divider {
   margin-top: clamp(4rem, 9vw, 6rem);
 }
@@ -970,7 +948,7 @@ p {
 .gifts {
   width: min(100% - (2 * var(--content-gutter)), var(--max-content-width));
   margin-inline: auto;
-  padding-block: var(--section-padding-y-light-mobile);
+  padding-top: var(--section-padding-y-light-mobile);
   display: grid;
   gap: var(--space-lg);
 }
@@ -1003,7 +981,7 @@ p {
 .site-footer__inner {
   width: min(100% - (2 * var(--content-gutter)), var(--max-content-width));
   margin-inline: auto;
-  padding-block: var(--section-padding-y-compact-mobile);
+  padding-block: 24px;
   display: grid;
   gap: var(--space-sm);
   justify-items: center;
@@ -1017,10 +995,6 @@ p {
   font-weight: var(--font-weight-light);
   line-height: var(--line-height-compact);
   color: var(--color-black);
-}
-
-.site-footer__message {
-  max-width: 26ch;
 }
 
 .reveal {
@@ -1131,10 +1105,12 @@ p {
 
   .chapter-intro__title {
     font-size: var(--font-size-heading-lg);
+    text-align: left;
   }
 
   .chapter-intro__text {
     font-size: var(--font-size-body-lg);
+    text-align: left;
   }
 
   .chapter-intro__media {
@@ -1233,10 +1209,6 @@ p {
     gap: clamp(5rem, 9vw, 7rem);
   }
 
-  .schedule__title {
-    max-width: 13ch;
-  }
-
   .schedule__timeline {
     width: min(100%, calc((2 * var(--measure-content)) + var(--content-grid-gap)));
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1245,7 +1217,6 @@ p {
   }
 
   .menu {
-    padding-block: var(--section-padding-y-light-desktop);
     gap: clamp(5rem, 9vw, 7rem);
   }
 
@@ -1257,7 +1228,7 @@ p {
   }
 
   .gifts {
-    padding-block: var(--section-padding-y-light-desktop);
+    padding-top: var(--section-padding-y-light-desktop);
     justify-items: center;
     text-align: center;
   }
@@ -1269,7 +1240,7 @@ p {
   }
 
   .site-footer__inner {
-    padding-block: var(--section-padding-y-compact-desktop);
+    padding-block: 24px;
     grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     justify-items: stretch;
@@ -1279,7 +1250,6 @@ p {
 
   .site-footer__message {
     justify-self: end;
-    max-width: 32ch;
     text-align: right;
   }
 
