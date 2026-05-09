@@ -163,7 +163,7 @@ const i18n = {
       eyebrow: "Gifts",
       title: "Your presence is already the greatest gift.",
       intro: "Being with us on this day is what matters most to us",
-      body: "Having you celebrate with us is more than enough—we do not expect any gifts. If you insist on spoiling us even more, a cash contribution towards our honeymoon fund would help us to have even more fun. There will be a card box at the wedding for any envelopes",
+      body: "If you insist on spoiling us even more, a cash contribution towards our honeymoon fund would help us to have even more fun. There will be a card box at the wedding for any envelopes",
     },
     faqSection: {
       placeholderTitle: "FAQ",
@@ -355,7 +355,7 @@ const i18n = {
       eyebrow: "Regalos",
       title: "Vuestra presencia ya es el mejor regalo.",
       intro: "Lo que más nos importa es compartir este día con vosotros.",
-      body: "Celebrar este día con vosotros es más que suficiente; no esperamos ningún regalo. Si aun así queréis tener un detalle con nosotros, una aportación en efectivo para nuestra luna de miel nos ayudará a disfrutarla todavía más. Habrá una caja para tarjetas y sobres el día de la boda.",
+      body: "Si aun así queréis tener un detalle con nosotros, una aportación en efectivo para nuestra luna de miel nos ayudará a disfrutarla todavía más. Habrá una caja para tarjetas y sobres el día de la boda.",
     },
     faqSection: {
       placeholderTitle: "Preguntas frecuentes",
