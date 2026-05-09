@@ -184,7 +184,15 @@ Use controlled inline emphasis inside body copy when specific words need visual 
 | --- | --- | --- |
 | Inline Emphasis | `strong.text-emphasis`, `--font-weight-semibold` | Semibold underlined emphasis inside translated sentences. |
 
-## 16. Note / Italic
+## 16. Editorial Note
+
+Use this pattern for secondary editorial notes inside timeline entries or other light editorial information blocks.
+
+| Pattern role | Reuses | Intended use |
+| --- | --- | --- |
+| Editorial Note | `--font-size-body-xs`, `--font-body`, `--font-weight-light`, `--line-height-compact`, `--color-gray` | Archivo light, 14px, 120%, for soft secondary guidance inside editorial sections or schedule events. |
+
+## 17. Note / Italic
 
 Use this pattern for explanatory notes or soft instructions that should feel secondary but still readable.
 
@@ -192,7 +200,7 @@ Use this pattern for explanatory notes or soft instructions that should feel sec
 | --- | --- | --- |
 | Note / Italic | `--font-size-body-sm`, `--font-body`, `--font-weight-light`, `--line-height-heading`, `--color-gray` | Archivo light italic, 16px, 110%, for menu notes and similar secondary guidance. |
 
-## 17. Section Divider
+## 18. Section Divider
 
 Use this pattern for subtle separation between light sections without introducing visible card edges or heavy rules.
 
@@ -201,7 +209,7 @@ Use this pattern for subtle separation between light sections without introducin
 | Section Divider / Thickness | `--section-divider-height` | Shared 1px editorial divider thickness. |
 | Section Divider / Color | `--color-border-subtle` | Very soft horizontal rule on `--color-white` surfaces. |
 
-## 18. Arrow List
+## 19. Arrow List
 
 Use this pattern for editorial food lists or similar semantic lists where the arrow is decorative rather than part of the translated content.
 
@@ -211,7 +219,7 @@ Use this pattern for editorial food lists or similar semantic lists where the ar
 | Arrow List / Marker | `.arrow-list__item::before` | Visual `→` marker added in CSS instead of inside i18n strings. |
 | Arrow List / Body | Body / Regular | Multi-line list items with consistent wrapping and indentation. |
 
-## 19. Small Editorial Footer
+## 20. Small Editorial Footer
 
 Use this pattern for compact closing copy after the main sections have finished.
 
@@ -222,14 +230,14 @@ Use this pattern for compact closing copy after the main sections have finished.
 | Small Editorial Footer / Desktop Padding | `--section-padding-y-compact-desktop` | Compact but breathable desktop footer spacing. |
 | Small Editorial Footer / Layout | Horizontal on desktop, stacked and centered on mobile | Closing signature pattern that does not compete with section content. |
 
-## 20. Z-index
+## 21. Z-index
 
 | Variable | Value | Intended use |
 | --- | --- | --- |
 | `--z-header` | `100` | Header stacking context. |
 | `--z-mobile-menu` | `200` | Fullscreen mobile menu overlay. |
 
-## 21. Motion
+## 22. Motion
 
 | Variable | Value | Intended use |
 | --- | --- | --- |

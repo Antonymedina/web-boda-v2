@@ -15,8 +15,8 @@ const i18n = {
       alt: "Antony and Joaneen together in the wedding portrait.",
     },
     chapterIntro: {
-      title: "Thank you for being part of this chapter.",
-      body: "We want to share this moment with all our loved ones, and you are one of them.",
+      title: "Thank you for being a part of our big day.",
+      body: "We want to share our special day with our loved ones, and you are one of them.",
     },
     nav: {
       weddingDetails: "Wedding details",
@@ -44,7 +44,7 @@ const i18n = {
     },
     unplugged: {
       eyebrow: "Unplugged ceremony",
-      title: "Please leave your phones away and be fully present with us.",
+      title: "Please do not take photos or videos during the ceremony.",
       body: "We would love for the ceremony to feel quiet and intimate. Our photographers will capture everything, so we kindly ask you not to take photos or videos during the ceremony itself.",
     },
     weddingDetailsSection: {
@@ -66,7 +66,7 @@ const i18n = {
           meta: "Comte Borrell, 68, Eixample, 08015 Barcelona",
         },
         emergencyContact: {
-          label: "EMERGENCY CONTACT",
+          label: "EMERGENCY CONTACT - Wedding Planner",
           value: "Ria Bos",
           meta: "+34 631 04 14 13",
         },
@@ -77,7 +77,7 @@ const i18n = {
       title: "Formal / Semi-formal",
       intro: "Elegant, polished and comfortable enough to dance in.",
       detailsEyebrow: "More details",
-      minimalTitle: "Minimal, timeless and softly tailored",
+      minimalTitle: "Modest, minimal, timeless and softly tailored",
       minimalBody: "Neutral tones, black, deep green, navy, muted colors will all fit beautifully.",
       avoidTitle: "What to avoid",
       avoidBodyHtml:
@@ -85,38 +85,41 @@ const i18n = {
     },
     scheduleSection: {
       eyebrow: "Schedule",
-      title: "A gentle timeline for the day.",
+      title: "Our timeline for the day",
       intro: "We have planned the day with plenty of time to linger, greet one another and enjoy the setting.",
       items: {
         arrival: {
-          time: "16h",
-          title: "Arrival & welcome drink",
+          time: "16.00 - 16.30",
+          title: "Guest arrival and welcome drink",
           text: "A first toast in the gardens while everyone settles in.",
         },
         ceremony: {
-          time: "17h",
+          time: "16.30 - 17.30",
           title: "Ceremony",
           text: "Our ceremony begins shortly after guests are seated.",
+          note: "Please note: No photos or videos. If you are late, you will have to wait until the ceremony is finished and join us at the cocktail hour, so that the ceremony is not interrupted.",
         },
         cocktail: {
-          time: "18h",
+          time: "17.30 - 19.00",
           title: "Cocktail hour",
           text: "Music, seasonal bites and time to wander through the venue.",
+          note: "One hour open bar with beer, wine, water, soft drinks.",
         },
         dinner: {
-          time: "19h",
-          title: "Dinner",
+          time: "19.00 - 19.30",
+          title: "Seating",
           text: "A seated dinner with speeches, wine and a slow evening pace.",
         },
         cake: {
-          time: "21h",
-          title: "Cake & first dance",
+          time: "19.30 - 22.00",
+          title: "Dinner, speeches, fun & games",
           text: "We will open the dance floor just after dessert.",
         },
         celebration: {
-          time: "21:30h",
-          title: "Celebration",
+          time: "22.00 - 00.00",
+          title: "Party Rock - Dance the night away",
           text: "Dancing time.",
+          note: "One and a half hour open bar with beer, wine, water, soft drinks.",
         },
       },
     },
@@ -125,8 +128,8 @@ const i18n = {
       title: "Please share your dinner preferences.",
       intro: "It won’t be possible to change what you pick, so please, be sure what you choose.",
       starters: {
-        title: "Starters to share",
-        note: "You don’t need to choose starters.",
+        title: "Starters",
+        note: "All of these will be to share.",
         items: {
           burrata: "Burrata with tomato and roasted olives with rosemary and garlic",
           bravas: "Classic bravas with chistorra, spicy romesco and roasted garlic aioli",
@@ -137,7 +140,7 @@ const i18n = {
       },
       main: {
         title: "Main dish",
-        note: "Choose one and let us know on WhatsApp.",
+        note: "Please choose your main course and let us know on whatsapp, before 1 June 2026.",
         items: {
           octopus: "Baby octopus with onions, a spicy touch, crushed potato and aioli.",
           chicken: "Menudo roasted chicken with French fries",
@@ -145,12 +148,22 @@ const i18n = {
           risotto: "Cep mushroom risotto with wild mushrooms and Parmesan cheese",
         },
       },
+      dessert: {
+        title: "Dessert",
+        items: {
+          cupcakes: "Vanilla wedding cupcakes",
+        },
+      },
+      drinks: {
+        title: "Drinks",
+        text: "Two drinks are included with your dinner. You can choose between beer, wine, water and soft drinks.",
+      },
     },
     giftsSection: {
       eyebrow: "Gifts",
       title: "Your presence is already the greatest gift.",
-      intro: "Being together is what matters most to us.",
-      body: "For those who have asked, we would be grateful for a contribution toward our honeymoon and the home we are building together.",
+      intro: "Being with us on this day is what matters most to us",
+      body: "Having you celebrate with us is more than enough—we do not expect any gifts. If you insist on spoiling us even more, a cash contribution towards our honeymoon fund would help us to have even more fun. There will be a card box at the wedding for any envelopes",
     },
     faqSection: {
       placeholderTitle: "FAQ",
@@ -194,8 +207,8 @@ const i18n = {
       alt: "Antony y Joaneen juntos en el retrato principal de la boda.",
     },
     chapterIntro: {
-      title: "Gracias por ser parte de este capítulo.",
-      body: "Queremos compartir este momento con todas las personas que queremos, y tú eres una de ellas.",
+      title: "Gracias por formar parte de nuestro gran día.",
+      body: "Queremos compartir este día tan especial con las personas que queremos, y tú eres una de ellas.",
     },
     nav: {
       weddingDetails: "Detalles de la boda",
@@ -223,7 +236,7 @@ const i18n = {
     },
     unplugged: {
       eyebrow: "Ceremonia sin móviles",
-      title: "Por favor, guarda tu móvil y vive este momento con nosotros.",
+      title: "Por favor, no hagas fotos ni vídeos durante la ceremonia.",
       body: "Nos encantaría que la ceremonia se sintiera tranquila e íntima. Nuestros fotógrafos capturarán todo, así que te pedimos amablemente que no tomes fotos ni vídeos durante la ceremonia.",
     },
     weddingDetailsSection: {
@@ -245,7 +258,7 @@ const i18n = {
           meta: "Comte Borrell, 68, Eixample, 08015 Barcelona",
         },
         emergencyContact: {
-          label: "CONTACTO DE EMERGENCIA",
+          label: "CONTACTO DE EMERGENCIA - WEDDING PLANNER",
           value: "Ria Bos",
           meta: "+34 631 04 14 13",
         },
@@ -256,7 +269,7 @@ const i18n = {
       title: "Formal / Semiformal",
       intro: "Elegante, cuidado y cómodo para bailar.",
       detailsEyebrow: "Más detalles",
-      minimalTitle: "Minimalista, atemporal y suavemente entallado",
+      minimalTitle: "Recatado, minimalista, atemporal y suavemente entallado",
       minimalBody: "Los tonos neutros, negro, verde oscuro, azul marino y colores apagados encajarán perfectamente.",
       avoidTitle: "Qué evitar",
       avoidBodyHtml:
@@ -264,38 +277,41 @@ const i18n = {
     },
     scheduleSection: {
       eyebrow: "Programa",
-      title: "Una cronología tranquila para el día.",
+      title: "El horario del día",
       intro: "Hemos planeado el día con tiempo suficiente para disfrutar, saludar y compartir el ambiente.",
       items: {
         arrival: {
-          time: "16h",
-          title: "Llegada y copa de bienvenida",
+          time: "16.00 - 16.30",
+          title: "Llegada de los invitados y copa de bienvenida",
           text: "Un primer brindis en los jardines mientras todos se acomodan.",
         },
         ceremony: {
-          time: "17h",
+          time: "16.30 - 17.30",
           title: "Ceremonia",
           text: "La ceremonia comenzará poco después de que los invitados tomen asiento.",
+          note: "Por favor, ten en cuenta que no se permiten fotos ni vídeos. Si llegas tarde, tendrás que esperar hasta que termine la ceremonia y unirte a nosotros durante el cóctel, para no interrumpirla.",
         },
         cocktail: {
-          time: "18h",
+          time: "17.30 - 19.00",
           title: "Cóctel",
           text: "Música, bocados de temporada y tiempo para recorrer el espacio.",
+          note: "Una hora de barra libre con cerveza, vino, agua y refrescos.",
         },
         dinner: {
-          time: "19h",
-          title: "Cena",
+          time: "19.00 - 19.30",
+          title: "Tomamos asiento",
           text: "Una cena sentada con discursos, vino y un ritmo de noche pausado.",
         },
         cake: {
-          time: "21h",
-          title: "Tarta y primer baile",
+          time: "19.30 - 22.00",
+          title: "Cena, discursos, diversión y juegos",
           text: "Abriremos la pista de baile justo después del postre.",
         },
         celebration: {
-          time: "21:30h",
-          title: "Celebración",
+          time: "22.00 - 00.00",
+          title: "Party Rock -A bailar toda la noche",
           text: "Hora de bailar.",
+          note: "Una hora y media de barra libre con cerveza, vino, agua y refrescos.",
         },
       },
     },
@@ -304,8 +320,8 @@ const i18n = {
       title: "Por favor, comparte tus preferencias para la cena.",
       intro: "No será posible cambiar lo que elijas, así que, por favor, asegúrate de tu elección.",
       starters: {
-        title: "Entrantes para compartir",
-        note: "No necesitas elegir entrantes.",
+        title: "Entrantes",
+        note: "Todos se servirán para compartir.",
         items: {
           burrata: "Burrata con tomate y aceitunas asadas al romero y ajos",
           bravas: "Las bravas de siempre con chistorra, romesco picante y alioli de ajos rustidos",
@@ -316,7 +332,7 @@ const i18n = {
       },
       main: {
         title: "Plato principal",
-        note: "Elige uno y háznoslo saber por WhatsApp.",
+        note: "Por favor, elige tu plato principal y háznoslo saber por WhatsApp antes del 1 de junio de 2026.",
         items: {
           octopus: "Pulpitos encebollados con toque picante, patata machacada y alioli.",
           chicken: "Menudo pollo asado con patatas fritas",
@@ -324,12 +340,22 @@ const i18n = {
           risotto: "Risotto de ceps con setas y queso parmesano",
         },
       },
+      dessert: {
+        title: "Postre",
+        items: {
+          cupcakes: "Cupcakes de vainilla de boda",
+        },
+      },
+      drinks: {
+        title: "Bebidas",
+        text: "La cena incluye dos bebidas. Puedes elegir entre cerveza, vino, agua y refrescos.",
+      },
     },
     giftsSection: {
       eyebrow: "Regalos",
       title: "Vuestra presencia ya es el mejor regalo.",
-      intro: "Estar juntos es lo que más nos importa.",
-      body: "Para quienes nos lo han preguntado, agradeceremos mucho una contribución para nuestra luna de miel y el hogar que estamos construyendo juntos.",
+      intro: "Lo que más nos importa es compartir este día con vosotros.",
+      body: "Celebrar este día con vosotros es más que suficiente; no esperamos ningún regalo. Si aun así queréis tener un detalle con nosotros, una aportación en efectivo para nuestra luna de miel nos ayudará a disfrutarla todavía más. Habrá una caja para tarjetas y sobres el día de la boda.",
     },
     faqSection: {
       placeholderTitle: "Preguntas frecuentes",
