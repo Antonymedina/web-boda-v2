@@ -452,8 +452,300 @@
         </div>
       </section>
 
-      <section id="faq" class="faq-placeholder" aria-labelledby="faq-placeholder-title">
-        <h2 id="faq-placeholder-title" class="sr-only" data-i18n="faqSection.placeholderTitle">FAQ</h2>
+      <section id="faq" class="faq-section" aria-labelledby="faq-title">
+        <div class="faq">
+          <header class="faq__header reveal">
+            <p class="faq__eyebrow" data-i18n="faqSection.eyebrow">FAQ</p>
+            <h2 id="faq-title" class="faq__title" data-i18n="faqSection.title">Do you have extra questions?</h2>
+          </header>
+
+          <ol class="faq__list reveal" data-accordion>
+            <li class="faq__item">
+              <h3 class="faq__question-heading">
+                <button
+                  class="faq__question"
+                  type="button"
+                  id="faq-question-plus-one"
+                  aria-expanded="true"
+                  aria-controls="faq-answer-plus-one"
+                  data-accordion-button
+                >
+                  <span class="faq__question-text" data-i18n="faqSection.items.plusOne.question">
+                    Can I bring a +1?
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+
+              <div
+                class="faq__answer"
+                id="faq-answer-plus-one"
+                role="region"
+                aria-labelledby="faq-question-plus-one"
+                data-accordion-panel
+              >
+                <p class="faq__answer-text" data-i18n="faqSection.items.plusOne.answer">
+                  Sadly, due to limited space, we are only able to accommodate the guests included in the invitation.
+                </p>
+              </div>
+            </li>
+
+            <li class="faq__item">
+              <h3 class="faq__question-heading">
+                <button
+                  class="faq__question"
+                  type="button"
+                  id="faq-question-pet"
+                  aria-expanded="false"
+                  aria-controls="faq-answer-pet"
+                  data-accordion-button
+                >
+                  <span class="faq__question-text" data-i18n="faqSection.items.pet.question">
+                    Can I bring a pet?
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+
+              <div
+                class="faq__answer"
+                id="faq-answer-pet"
+                role="region"
+                aria-labelledby="faq-question-pet"
+                data-accordion-panel
+                hidden
+              >
+                <p class="faq__answer-text" data-i18n="faqSection.items.pet.answer">
+                  Unfortunately, pets are not allowed at the venue.
+                </p>
+              </div>
+            </li>
+
+            <li class="faq__item">
+              <h3 class="faq__question-heading">
+                <button
+                  class="faq__question"
+                  type="button"
+                  id="faq-question-parking"
+                  aria-expanded="false"
+                  aria-controls="faq-answer-parking"
+                  data-accordion-button
+                >
+                  <span class="faq__question-text" data-i18n="faqSection.items.parking.question">
+                    Is there parking nearby?
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+
+              <div
+                class="faq__answer"
+                id="faq-answer-parking"
+                role="region"
+                aria-labelledby="faq-question-parking"
+                data-accordion-panel
+                hidden
+              >
+                <p class="faq__answer-text" data-i18n="faqSection.items.parking.answer">
+                  There is parking nearby, but as the venue is located in the city centre, we recommend using public
+                  transport to avoid any inconvenience.
+                </p>
+              </div>
+            </li>
+
+            <li class="faq__item">
+              <h3 class="faq__question-heading">
+                <button
+                  class="faq__question"
+                  type="button"
+                  id="faq-question-end-time"
+                  aria-expanded="false"
+                  aria-controls="faq-answer-end-time"
+                  data-accordion-button
+                >
+                  <span class="faq__question-text" data-i18n="faqSection.items.endTime.question">
+                    What time does the celebration end?
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+
+              <div
+                class="faq__answer"
+                id="faq-answer-end-time"
+                role="region"
+                aria-labelledby="faq-question-end-time"
+                data-accordion-panel
+                hidden
+              >
+                <p class="faq__answer-text" data-i18n="faqSection.items.endTime.answer">
+                  You can find all the details in the Schedule section. The final part of the evening will be the
+                  dance floor, starting at 22:00.
+                </p>
+              </div>
+            </li>
+
+            <li class="faq__item">
+              <h3 class="faq__question-heading">
+                <button
+                  class="faq__question"
+                  type="button"
+                  id="faq-question-late"
+                  aria-expanded="false"
+                  aria-controls="faq-answer-late"
+                  data-accordion-button
+                >
+                  <span class="faq__question-text" data-i18n="faqSection.items.late.question">
+                    What happens if I am late?
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+
+              <div
+                class="faq__answer"
+                id="faq-answer-late"
+                role="region"
+                aria-labelledby="faq-question-late"
+                data-accordion-panel
+                hidden
+              >
+                <p class="faq__answer-text" data-i18n="faqSection.items.late.answer">
+                  If you arrive after 16:30, when the ceremony begins, you will need to wait until it finishes,
+                  around 17:30, before joining us for the cocktail hour. If you arrive later during the celebration,
+                  you can join us at the appropriate moment.
+                </p>
+              </div>
+            </li>
+
+            <li class="faq__item">
+              <h3 class="faq__question-heading">
+                <button
+                  class="faq__question"
+                  type="button"
+                  id="faq-question-extra-drinks"
+                  aria-expanded="false"
+                  aria-controls="faq-answer-extra-drinks"
+                  data-accordion-button
+                >
+                  <span class="faq__question-text" data-i18n="faqSection.items.extraDrinks.question">
+                    Can I order drinks other than those included, such as beer, wine, water and soft drinks?
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+
+              <div
+                class="faq__answer"
+                id="faq-answer-extra-drinks"
+                role="region"
+                aria-labelledby="faq-question-extra-drinks"
+                data-accordion-panel
+                hidden
+              >
+                <p class="faq__answer-text" data-i18n="faqSection.items.extraDrinks.answer">
+                  Yes. We have arranged open bar moments with selected drinks. If you would like anything outside of
+                  what is included, you will be able to purchase it directly at the venue.
+                </p>
+              </div>
+            </li>
+
+            <li class="faq__item">
+              <h3 class="faq__question-heading">
+                <button
+                  class="faq__question"
+                  type="button"
+                  id="faq-question-accommodation"
+                  aria-expanded="false"
+                  aria-controls="faq-answer-accommodation"
+                  data-accordion-button
+                >
+                  <span class="faq__question-text" data-i18n="faqSection.items.accommodation.question">
+                    Is there accommodation nearby?
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+
+              <div
+                class="faq__answer"
+                id="faq-answer-accommodation"
+                role="region"
+                aria-labelledby="faq-question-accommodation"
+                data-accordion-panel
+                hidden
+              >
+                <p class="faq__answer-text" data-i18n="faqSection.items.accommodation.answer">
+                  Yes. The celebration will take place at a hotel-restaurant, so there may be rooms available at the
+                  venue. Since it is located in the city centre, there are also many accommodation options nearby.
+                </p>
+              </div>
+            </li>
+
+            <li class="faq__item">
+              <h3 class="faq__question-heading">
+                <button
+                  class="faq__question"
+                  type="button"
+                  id="faq-question-allergies"
+                  aria-expanded="false"
+                  aria-controls="faq-answer-allergies"
+                  data-accordion-button
+                >
+                  <span class="faq__question-text" data-i18n="faqSection.items.allergies.question">
+                    What if I have any allergies or dietary requirements?
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+
+              <div
+                class="faq__answer"
+                id="faq-answer-allergies"
+                role="region"
+                aria-labelledby="faq-question-allergies"
+                data-accordion-panel
+                hidden
+              >
+                <p class="faq__answer-text" data-i18n="faqSection.items.allergies.answer">
+                  Please let us know when you fill in your menu preferences, and we will do our best to arrange
+                  suitable options.
+                </p>
+              </div>
+            </li>
+
+            <li class="faq__item">
+              <h3 class="faq__question-heading">
+                <button
+                  class="faq__question"
+                  type="button"
+                  id="faq-question-cannot-attend"
+                  aria-expanded="false"
+                  aria-controls="faq-answer-cannot-attend"
+                  data-accordion-button
+                >
+                  <span class="faq__question-text" data-i18n="faqSection.items.cannotAttend.question">
+                    What if I can no longer attend?
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+
+              <div
+                class="faq__answer"
+                id="faq-answer-cannot-attend"
+                role="region"
+                aria-labelledby="faq-question-cannot-attend"
+                data-accordion-panel
+                hidden
+              >
+                <p class="faq__answer-text" data-i18n="faqSection.items.cannotAttend.answer">
+                  Please let us know as soon as possible. Thank you for understanding.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
       </section>
     </main>
 

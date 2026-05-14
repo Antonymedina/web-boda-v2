@@ -167,6 +167,54 @@ const i18n = {
     },
     faqSection: {
       placeholderTitle: "FAQ",
+      eyebrow: "FAQ",
+      title: "Do you have extra questions?",
+      items: {
+        plusOne: {
+          question: "Can I bring a +1?",
+          answer:
+            "Sadly, due to limited space, we are only able to accommodate the guests included in the invitation.",
+        },
+        pet: {
+          question: "Can I bring a pet?",
+          answer: "Unfortunately, pets are not allowed at the venue.",
+        },
+        parking: {
+          question: "Is there parking nearby?",
+          answer:
+            "There is parking nearby, but as the venue is located in the city centre, we recommend using public transport to avoid any inconvenience.",
+        },
+        endTime: {
+          question: "What time does the celebration end?",
+          answer:
+            "You can find all the details in the Schedule section. The final part of the evening will be the dance floor, starting at 22:00.",
+        },
+        late: {
+          question: "What happens if I am late?",
+          answer:
+            "If you arrive after 16:30, when the ceremony begins, you will need to wait until it finishes, around 17:30, before joining us for the cocktail hour. If you arrive later during the celebration, you can join us at the appropriate moment.",
+        },
+        extraDrinks: {
+          question:
+            "Can I order drinks other than those included, such as beer, wine, water and soft drinks?",
+          answer:
+            "Yes. We have arranged open bar moments with selected drinks. If you would like anything outside of what is included, you will be able to purchase it directly at the venue.",
+        },
+        accommodation: {
+          question: "Is there accommodation nearby?",
+          answer:
+            "Yes. The celebration will take place at a hotel-restaurant, so there may be rooms available at the venue. Since it is located in the city centre, there are also many accommodation options nearby.",
+        },
+        allergies: {
+          question: "What if I have any allergies or dietary requirements?",
+          answer:
+            "Please let us know when you fill in your menu preferences, and we will do our best to arrange suitable options.",
+        },
+        cannotAttend: {
+          question: "What if I can no longer attend?",
+          answer: "Please let us know as soon as possible. Thank you for understanding.",
+        },
+      },
     },
     footer: {
       names: "Joaneen & Antony",
@@ -359,6 +407,53 @@ const i18n = {
     },
     faqSection: {
       placeholderTitle: "Preguntas frecuentes",
+      eyebrow: "FAQ",
+      title: "¿Tienes alguna pregunta más?",
+      items: {
+        plusOne: {
+          question: "¿Puedo llevar acompañante?",
+          answer:
+            "Lamentablemente, por cuestiones de espacio, solo podemos recibir a las personas incluidas en la invitación.",
+        },
+        pet: {
+          question: "¿Puedo llevar mascota?",
+          answer: "Lamentablemente, no se permiten mascotas en el espacio del evento.",
+        },
+        parking: {
+          question: "¿Hay aparcamiento cerca?",
+          answer:
+            "Sí, hay aparcamiento cerca. Sin embargo, al estar en el centro de la ciudad, recomendamos usar transporte público para evitar cualquier contratiempo.",
+        },
+        endTime: {
+          question: "¿A qué hora termina la celebración?",
+          answer:
+            "Puedes encontrar todos los detalles en la sección de Programa. La última parte de la noche será el baile, que comenzará a las 22:00.",
+        },
+        late: {
+          question: "¿Qué pasa si llego tarde?",
+          answer:
+            "Si llegas después de las 16:30, cuando comienza la ceremonia, tendrás que esperar hasta que termine, aproximadamente a las 17:30, para unirte al cóctel. Si llegas más tarde durante la celebración, podrás incorporarte en el momento adecuado.",
+        },
+        extraDrinks: {
+          question: "¿Puedo pedir bebidas distintas a las incluidas, como cerveza, vino, agua y refrescos?",
+          answer:
+            "Sí. Hemos organizado momentos de barra libre con bebidas seleccionadas. Si deseas tomar algo fuera de lo incluido, podrás comprarlo directamente en el lugar.",
+        },
+        accommodation: {
+          question: "¿Hay alojamiento cerca?",
+          answer:
+            "Sí. La celebración tendrá lugar en un hotel-restaurante, por lo que es posible que haya habitaciones disponibles en el mismo lugar. Además, al estar en el centro de la ciudad, hay muchas opciones de alojamiento cerca.",
+        },
+        allergies: {
+          question: "¿Qué pasa si tengo alergias o requisitos alimentarios?",
+          answer:
+            "Por favor, indícalo cuando rellenes tus preferencias de menú y haremos todo lo posible por encontrar una opción adecuada.",
+        },
+        cannotAttend: {
+          question: "¿Qué pasa si finalmente no puedo asistir?",
+          answer: "Por favor, avísanos lo antes posible. Gracias por tu comprensión.",
+        },
+      },
     },
     footer: {
       names: "Joaneen & Antony",
@@ -396,6 +491,7 @@ const mobileMenu = document.querySelector(".mobile-menu");
 const languageButtons = document.querySelectorAll("[data-language-switch]");
 const internalLinks = document.querySelectorAll('a[href^="#"]');
 const revealElements = document.querySelectorAll(".reveal");
+const accordionAnimationState = new WeakMap();
 
 function getValueByPath(source, path) {
   return path.split(".").reduce((value, key) => (value ? value[key] : undefined), source);
@@ -502,7 +598,10 @@ function setLanguage(language) {
   root.lang = nextLanguage;
   storeLanguage(nextLanguage);
   updateMenuToggleLabel(menuToggle?.getAttribute("aria-expanded") === "true");
-  window.requestAnimationFrame(updateMobileMenuOffset);
+  window.requestAnimationFrame(() => {
+    updateMobileMenuOffset();
+    syncAccordionPanels();
+  });
 }
 
 function setMobileMenuState(isOpen) {
@@ -589,6 +688,210 @@ function initRevealAnimations() {
   });
 }
 
+function getAccordionItems(accordion) {
+  return Array.from(accordion.querySelectorAll("[data-accordion-button]"))
+    .map((button) => {
+      const panelId = button.getAttribute("aria-controls");
+      const panel = panelId ? document.getElementById(panelId) : null;
+
+      return panel ? { button, panel } : null;
+    })
+    .filter(Boolean);
+}
+
+function getAccordionAnimationState(panel) {
+  if (!accordionAnimationState.has(panel)) {
+    accordionAnimationState.set(panel, {
+      fallbackTimeoutId: null,
+      rafId: null,
+      transitionEndHandler: null,
+    });
+  }
+
+  return accordionAnimationState.get(panel);
+}
+
+function clearAccordionAnimationState(panel) {
+  const state = getAccordionAnimationState(panel);
+
+  if (state.rafId) {
+    window.cancelAnimationFrame(state.rafId);
+  }
+
+  if (state.fallbackTimeoutId) {
+    window.clearTimeout(state.fallbackTimeoutId);
+  }
+
+  if (state.transitionEndHandler) {
+    panel.removeEventListener("transitionend", state.transitionEndHandler);
+  }
+
+  state.rafId = null;
+  state.fallbackTimeoutId = null;
+  state.transitionEndHandler = null;
+}
+
+function stopAccordionAnimation(panel) {
+  clearAccordionAnimationState(panel);
+
+  if (panel.hidden) {
+    return;
+  }
+
+  panel.style.height = `${panel.getBoundingClientRect().height}px`;
+  panel.offsetHeight;
+}
+
+function finalizeAccordionPanel(button, panel, isOpen) {
+  clearAccordionAnimationState(panel);
+  button.setAttribute("aria-expanded", String(isOpen));
+  panel.classList.remove("is-opening", "is-closing");
+  panel.classList.toggle("is-open", isOpen);
+
+  if (isOpen) {
+    panel.hidden = false;
+    panel.style.height = "auto";
+    return;
+  }
+
+  panel.hidden = true;
+  panel.style.height = "0px";
+}
+
+function openAccordionPanel(button, panel, options = {}) {
+  const { immediate = false } = options;
+
+  stopAccordionAnimation(panel);
+  button.setAttribute("aria-expanded", "true");
+  panel.hidden = false;
+  panel.classList.remove("is-closing", "is-open");
+  panel.classList.add("is-opening");
+
+  if (immediate || prefersReducedMotion) {
+    finalizeAccordionPanel(button, panel, true);
+    return;
+  }
+
+  panel.style.height = "0px";
+  panel.offsetHeight;
+
+  const targetHeight = panel.scrollHeight;
+  const state = getAccordionAnimationState(panel);
+  const handleTransitionEnd = (event) => {
+    if (event.target !== panel || event.propertyName !== "height") {
+      return;
+    }
+
+    finalizeAccordionPanel(button, panel, true);
+  };
+
+  state.transitionEndHandler = handleTransitionEnd;
+  panel.addEventListener("transitionend", handleTransitionEnd);
+  state.fallbackTimeoutId = window.setTimeout(
+    () => handleTransitionEnd({ propertyName: "height", target: panel }),
+    560
+  );
+  state.rafId = window.requestAnimationFrame(() => {
+    panel.style.height = `${targetHeight}px`;
+    state.rafId = null;
+  });
+}
+
+function closeAccordionPanel(button, panel, options = {}) {
+  const { immediate = false } = options;
+
+  stopAccordionAnimation(panel);
+  button.setAttribute("aria-expanded", "false");
+
+  if (immediate || prefersReducedMotion) {
+    finalizeAccordionPanel(button, panel, false);
+    return;
+  }
+
+  panel.hidden = false;
+  panel.classList.remove("is-opening", "is-open");
+  panel.classList.add("is-closing");
+  panel.style.height = `${panel.getBoundingClientRect().height || panel.scrollHeight}px`;
+  panel.offsetHeight;
+
+  const state = getAccordionAnimationState(panel);
+  const handleTransitionEnd = (event) => {
+    if (event.target !== panel || event.propertyName !== "height") {
+      return;
+    }
+
+    finalizeAccordionPanel(button, panel, false);
+  };
+
+  state.transitionEndHandler = handleTransitionEnd;
+  panel.addEventListener("transitionend", handleTransitionEnd);
+  state.fallbackTimeoutId = window.setTimeout(
+    () => handleTransitionEnd({ propertyName: "height", target: panel }),
+    560
+  );
+  state.rafId = window.requestAnimationFrame(() => {
+    panel.style.height = "0px";
+    state.rafId = null;
+  });
+}
+
+function syncAccordionPanels() {
+  document.querySelectorAll("[data-accordion]").forEach((accordion) => {
+    const items = getAccordionItems(accordion);
+
+    if (!items.length) {
+      return;
+    }
+
+    let hasOpenItem = false;
+
+    items.forEach((item) => {
+      const shouldOpen = item.button.getAttribute("aria-expanded") === "true" && !hasOpenItem;
+
+      if (shouldOpen) {
+        hasOpenItem = true;
+        openAccordionPanel(item.button, item.panel, { immediate: true });
+        return;
+      }
+
+      closeAccordionPanel(item.button, item.panel, { immediate: true });
+    });
+
+    if (!hasOpenItem) {
+      openAccordionPanel(items[0].button, items[0].panel, { immediate: true });
+    }
+  });
+}
+
+function initAccordions() {
+  document.querySelectorAll("[data-accordion]").forEach((accordion) => {
+    const items = getAccordionItems(accordion);
+
+    if (!items.length) {
+      return;
+    }
+
+    items.forEach((item) => {
+      item.button.addEventListener("click", () => {
+        if (item.button.getAttribute("aria-expanded") === "true") {
+          return;
+        }
+
+        items.forEach((otherItem) => {
+          if (otherItem === item) {
+            openAccordionPanel(otherItem.button, otherItem.panel);
+            return;
+          }
+
+          closeAccordionPanel(otherItem.button, otherItem.panel);
+        });
+      });
+    });
+  });
+
+  syncAccordionPanels();
+}
+
 function initEvents() {
   if (menuToggle) {
     menuToggle.addEventListener("click", toggleMobileMenu);
@@ -626,6 +929,7 @@ function init() {
   setMobileMenuState(false);
   updateMobileMenuOffset();
   initEvents();
+  initAccordions();
   initRevealAnimations();
 }
 

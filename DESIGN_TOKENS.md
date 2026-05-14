@@ -10,6 +10,7 @@ This file documents the visual variables used by the project. The current goal i
 | `--color-white` | `#f0f0f0` | Main off-white page background and light text on dark surfaces. |
 | `--color-gray` | `#5c5c5c` | Secondary text and lower-priority placeholder content. |
 | `--color-border-subtle` | `rgba(19, 19, 19, 0.08)` | Soft separators when minimal contrast is needed. |
+| `--color-border-inverse-subtle` | `rgba(240, 240, 240, 0.24)` | Soft separators on dark sections and inverse editorial surfaces. |
 | `--color-text-inverse` | `var(--color-white)` | Inverse text color for editorial dark surfaces. |
 
 ## 2. Typography Foundations
@@ -84,6 +85,7 @@ These are the semantic sizes intended for future instructions so component reque
 | `--section-padding-y-compact-desktop` | `var(--space-3xl)` | Compact footer-style vertical spacing on desktop. |
 | `--content-grid-gap` | `clamp(3rem, 6vw, 5rem)` | Shared gap for balanced editorial two-column grids. |
 | `--section-divider-height` | `1px` | Shared subtle horizontal divider thickness. |
+| `--accordion-item-padding-y` | `1rem` | Default vertical padding for compact accordion question/answer rows. |
 
 ## 6. Layout Widths And Breakpoints
 
@@ -230,17 +232,60 @@ Use this pattern for compact closing copy after the main sections have finished.
 | Small Editorial Footer / Desktop Padding | `--section-padding-y-compact-desktop` | Compact but breathable desktop footer spacing. |
 | Small Editorial Footer / Layout | Horizontal on desktop, stacked and centered on mobile | Closing signature pattern that does not compete with section content. |
 
-## 21. Z-index
+## 21. Dark Accordion / FAQ
+
+Use this pattern for accessible dark disclosure lists such as FAQ sections that need one active item at a time.
+
+| Pattern role | Reuses | Intended use |
+| --- | --- | --- |
+| Dark Accordion / Surface | `--color-black` | Full-width dark background shared with other inverse editorial sections. |
+| Dark Accordion / Text | `--color-text-inverse` | Inverse text for both question and answer copy. |
+| Dark Accordion / Divider | `--color-border-inverse-subtle`, `--section-divider-height` | Subtle separation between accordion items on dark surfaces. |
+| Dark Accordion / Padding | `--section-padding-y-dark-mobile`, `--section-padding-y-dark-desktop` | Section-level vertical rhythm around the FAQ block. |
+
+## 22. Accordion Item
+
+Use this pattern for interactive question-and-answer rows inside editorial accordions.
+
+| Pattern role | Reuses | Intended use |
+| --- | --- | --- |
+| Accordion Item / Question | Body / Medium | Clickable question row text with clear prominence. |
+| Accordion Item / Answer | Body / Regular | Supporting answer copy revealed below the question. |
+| Accordion Item / Row Padding | `--accordion-item-padding-y` | Comfortable vertical rhythm for both question and answer states. |
+| Accordion Item / Icon | `+` / `−` derived from `aria-expanded` | Lightweight disclosure signal without extra icon assets. |
+
+## 23. Inverse Section Divider
+
+Use this pattern for subtle horizontal rules inside dark editorial layouts.
+
+| Pattern role | Reuses | Intended use |
+| --- | --- | --- |
+| Inverse Section Divider | `--color-border-inverse-subtle`, `--section-divider-height` | Soft 1px divider that remains visible against `--color-black`. |
+
+## 24. Z-index
 
 | Variable | Value | Intended use |
 | --- | --- | --- |
 | `--z-header` | `100` | Header stacking context. |
 | `--z-mobile-menu` | `200` | Fullscreen mobile menu overlay. |
 
-## 22. Motion
+## 25. Motion
 
 | Variable | Value | Intended use |
 | --- | --- | --- |
 | `--motion-duration-base` | `0.6s` | Base duration for the reveal effect. |
 | `--motion-ease-standard` | `ease` | Standard easing for subtle fades and shifts. |
 | `--motion-distance-reveal` | `1rem` | Vertical offset used before an element becomes visible. |
+| `--motion-duration-accordion` | `420ms` | Subtle, premium opening and closing timing for editorial accordions. |
+| `--motion-ease-accordion` | `cubic-bezier(0.22, 1, 0.36, 1)` | Smooth luxury easing for accordion expansion, collapse and icon motion. |
+| `--motion-distance-accordion` | `0.35rem` | Small vertical offset for answer text as it fades into view. |
+
+## 26. Accordion Motion
+
+Use this pattern for accessible accordions that need restrained movement without feeling abrupt.
+
+| Pattern role | Reuses | Intended use |
+| --- | --- | --- |
+| Accordion Motion / Height | `--motion-duration-accordion`, `--motion-ease-accordion` | Smooth expansion and collapse of the answer panel. |
+| Accordion Motion / Content | `--motion-distance-accordion`, `--motion-duration-accordion`, `--motion-ease-accordion` | Small fade-and-rise treatment for the answer text. |
+| Accordion Motion / Reduced Motion | Existing `prefers-reduced-motion` handling | Immediate state changes when motion should be minimized. |
