@@ -65,11 +65,6 @@ const i18n = {
           value: "Market hotel Barcelona",
           meta: "Comte Borrell, 68, Eixample, 08015 Barcelona",
         },
-        emergencyContact: {
-          label: "EMERGENCY CONTACT - Wedding Planner",
-          value: "Ria Bos",
-          meta: "+34 631 04 14 13",
-        },
       },
     },
     dressCodeSection: {
@@ -102,13 +97,13 @@ const i18n = {
         cocktail: {
           time: "17.30 - 19.00",
           title: "Cocktail hour",
-          text: "Music, seasonal bites and time to wander through the venue.",
+          text: "Music and time to mingle.",
           note: "One hour open bar with beer, wine, water, soft drinks.",
         },
         dinner: {
           time: "19.00 - 19.30",
           title: "Seating",
-          text: "A seated dinner with speeches, wine and a slow evening pace.",
+          text: "Kindly find your seat so the evening festivities can begin",
         },
         cake: {
           time: "19.30 - 22.00",
@@ -158,6 +153,7 @@ const i18n = {
         title: "Drinks",
         text: "Two drinks are included with your dinner. You can choose between beer, wine, water and soft drinks.",
       },
+      cta: "Choose my dinner",
     },
     giftsSection: {
       eyebrow: "Gifts",
@@ -305,11 +301,6 @@ const i18n = {
           value: "Market hotel Barcelona",
           meta: "Comte Borrell, 68, Eixample, 08015 Barcelona",
         },
-        emergencyContact: {
-          label: "CONTACTO DE EMERGENCIA - WEDDING PLANNER",
-          value: "Ria Bos",
-          meta: "+34 631 04 14 13",
-        },
       },
     },
     dressCodeSection: {
@@ -342,13 +333,13 @@ const i18n = {
         cocktail: {
           time: "17.30 - 19.00",
           title: "Cóctel",
-          text: "Música, bocados de temporada y tiempo para recorrer el espacio.",
+          text: "Música y tiempo para conversar.",
           note: "Una hora de barra libre con cerveza, vino, agua y refrescos.",
         },
         dinner: {
           time: "19.00 - 19.30",
           title: "Tomamos asiento",
-          text: "Una cena sentada con discursos, vino y un ritmo de noche pausado.",
+          text: "Pasa a tomar asiento.",
         },
         cake: {
           time: "19.30 - 22.00",
@@ -398,6 +389,7 @@ const i18n = {
         title: "Bebidas",
         text: "La cena incluye dos bebidas. Puedes elegir entre cerveza, vino, agua y refrescos.",
       },
+      cta: "Escoger mi cena",
     },
     giftsSection: {
       eyebrow: "Regalos",
