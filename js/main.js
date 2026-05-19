@@ -44,8 +44,8 @@ const i18n = {
     },
     unplugged: {
       eyebrow: "Unplugged ceremony",
-      title: "Please do not take photos or videos during the ceremony.",
-      body: "We would love for the ceremony to feel quiet and intimate. Our photographers will capture everything, so we kindly ask you not to take photos or videos during the ceremony itself.",
+      title: "We kindly ask that no photos or videos be taken during the ceremony.",
+      body: "Thank you for being present with us.",
     },
     weddingDetailsSection: {
       eyebrow: "Wedding details",
@@ -86,7 +86,7 @@ const i18n = {
         arrival: {
           time: "16.00 - 16.30",
           title: "Guest arrival and welcome drink",
-          text: "A first toast in the gardens while everyone settles in.",
+          text: "We kindly ask guests to arrive on time, settle into their seats, enjoy a welcome drink, and take a moment to connect with friends.",
         },
         ceremony: {
           time: "16.30 - 17.30",
@@ -121,7 +121,7 @@ const i18n = {
     menuSection: {
       eyebrow: "Menu",
       title: "Please share your dinner preferences.",
-      intro: "It won’t be possible to change what you pick, so please, be sure what you choose.",
+      intro: "Please note, once you confirm your main course, it will not be possible to change what you selected.",
       starters: {
         title: "Starters",
         note: "All of these will be to share.",
@@ -280,8 +280,8 @@ const i18n = {
     },
     unplugged: {
       eyebrow: "Ceremonia sin móviles",
-      title: "Por favor, no hagas fotos ni vídeos durante la ceremonia.",
-      body: "Nos encantaría que la ceremonia se sintiera tranquila e íntima. Nuestros fotógrafos capturarán todo, así que te pedimos amablemente que no tomes fotos ni vídeos durante la ceremonia.",
+      title: "Les rogamos que no tomen fotos ni vídeos durante la ceremonia.",
+      body: "Gracias por estar presente con nosotros.",
     },
     weddingDetailsSection: {
       eyebrow: "Detalles de la boda",
@@ -322,7 +322,7 @@ const i18n = {
         arrival: {
           time: "16.00 - 16.30",
           title: "Llegada de los invitados y copa de bienvenida",
-          text: "Un primer brindis en los jardines mientras todos se acomodan.",
+          text: "Les rogamos a nuestros invitados que lleguen puntualmente, se acomoden en sus asientos, disfruten de una bebida de bienvenida y se tomen un momento para charlar.",
         },
         ceremony: {
           time: "16.30 - 17.30",
