@@ -348,7 +348,7 @@ const i18n = {
         },
         celebration: {
           time: "22.00 - 00.00",
-          title: "Party Rock -A bailar toda la noche",
+          title: "Party Rock - A bailar toda la noche",
           text: "Hora de bailar.",
           note: "Una hora y media de barra libre con cerveza, vino, agua y refrescos.",
         },
