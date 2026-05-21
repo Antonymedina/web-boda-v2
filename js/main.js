@@ -73,10 +73,10 @@ const i18n = {
       intro: "Elegant, polished and comfortable enough to dance in.",
       detailsEyebrow: "More details",
       minimalTitle: "Modest, minimal, timeless and softly tailored",
-      minimalBody: "Neutral tones, black, deep green, navy, muted colors will all fit beautifully.",
+      minimalBody: "Neutral tones, dark colors, deep green, navy, muted colors will all fit beautifully.",
       avoidTitle: "What to avoid",
       avoidBodyHtml:
-        'We kindly ask guests to avoid <strong class="text-emphasis">yellow</strong>, <strong class="text-emphasis">orange</strong>, <strong class="text-emphasis">red</strong> and <strong class="text-emphasis">patterns</strong> so the overall palette stays calm and harmonious in photos.',
+        'We kindly ask guests to avoid <strong class="text-emphasis">black (dress)</strong>, <strong class="text-emphasis">yellow</strong>, <strong class="text-emphasis">orange</strong>, <strong class="text-emphasis">red</strong> and <strong class="text-emphasis">patterns</strong> so the overall palette stays calm and harmonious in photos.',
     },
     scheduleSection: {
       eyebrow: "Schedule",
@@ -309,10 +309,10 @@ const i18n = {
       intro: "Elegante, cuidado y cómodo para bailar.",
       detailsEyebrow: "Más detalles",
       minimalTitle: "Recatado, minimalista, atemporal y suavemente entallado",
-      minimalBody: "Los tonos neutros, negro, verde oscuro, azul marino y colores apagados encajarán perfectamente.",
+      minimalBody: "Los tonos neutros, colores oscuros, verde oscuro, azul marino y colores apagados encajarán perfectamente.",
       avoidTitle: "Qué evitar",
       avoidBodyHtml:
-        'Pedimos amablemente a los invitados que eviten <strong class="text-emphasis">amarillo</strong>, <strong class="text-emphasis">naranja</strong>, <strong class="text-emphasis">rojo</strong> y <strong class="text-emphasis">estampados</strong> para que la paleta general se mantenga tranquila y armoniosa en las fotos.',
+        'Pedimos amablemente a los invitados que eviten <strong class="text-emphasis">(vestido) negro</strong>, <strong class="text-emphasis">amarillo</strong>, <strong class="text-emphasis">naranja</strong>, <strong class="text-emphasis">rojo</strong> y <strong class="text-emphasis">estampados</strong> para que la paleta general se mantenga tranquila y armoniosa en las fotos.',
     },
     scheduleSection: {
       eyebrow: "Programa",
