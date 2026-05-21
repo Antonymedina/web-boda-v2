@@ -137,10 +137,10 @@ const i18n = {
         title: "Main dish",
         note: "Please choose your main course and let us know on whatsapp, before 1 June 2026.",
         items: {
-          octopus: "Baby octopus with onions, a spicy touch, crushed potato and aioli.",
-          chicken: "Menudo roasted chicken with French fries",
-          duck: "Duck magret with sweet potato purée and pears in red wine",
-          risotto: "Cep mushroom risotto with wild mushrooms and Parmesan cheese",
+          octopus: "Grilled salmon with salad",
+          chicken: "Beef Fricandó with rice",
+          duck: "Duck Confit with mashed potatoes",
+          risotto: "Octopus and artichoke paella",
         },
       },
       dessert: {
@@ -373,10 +373,10 @@ const i18n = {
         title: "Plato principal",
         note: "Por favor, elige tu plato principal y háznoslo saber por WhatsApp antes del 1 de junio de 2026.",
         items: {
-          octopus: "Pulpitos encebollados con toque picante, patata machacada y alioli.",
-          chicken: "Menudo pollo asado con patatas fritas",
-          duck: "Magret de pato con puré de moniato y peras al vino tinto",
-          risotto: "Risotto de ceps con setas y queso parmesano",
+          octopus: "Salmón a la plancha con ensalada",
+          chicken: "Fricandó de ternera con arroz",
+          duck: "Confit de pato con puré de patatas",
+          risotto: "Paella de pulpo y alcachofas",
         },
       },
       dessert: {
