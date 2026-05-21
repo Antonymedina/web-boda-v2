@@ -486,17 +486,18 @@ h3 {
   width: 100%;
   height: 2px;
   background-color: currentColor;
+  transform-origin: center;
   transition:
     transform 0.25s ease,
     opacity 0.25s ease;
 }
 
-.menu-toggle[aria-expanded="true"] .menu-toggle__line:first-of-type {
-  transform: translateY(0.28rem) rotate(6deg);
+.menu-toggle[aria-expanded="true"] .menu-toggle__line--top {
+  transform: translateY(0.28rem) rotate(45deg);
 }
 
-.menu-toggle[aria-expanded="true"] .menu-toggle__line:last-of-type {
-  transform: translateY(-0.28rem) rotate(-6deg);
+.menu-toggle[aria-expanded="true"] .menu-toggle__line--bottom {
+  transform: translateY(-0.28rem) rotate(-45deg);
 }
 
 .mobile-menu {
