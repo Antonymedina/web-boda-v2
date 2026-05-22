@@ -135,7 +135,7 @@ const i18n = {
       },
       main: {
         title: "Main dish",
-        note: "Please choose your main course and let us know on whatsapp, before 1 June 2026.",
+        note: "Please choose your main course before 1 June 2026.",
         items: {
           octopus: "Grilled salmon with salad",
           chicken: "Beef Fricandó with rice",
@@ -371,7 +371,7 @@ const i18n = {
       },
       main: {
         title: "Plato principal",
-        note: "Por favor, elige tu plato principal y háznoslo saber por WhatsApp antes del 1 de junio de 2026.",
+        note: "Por favor, elige tu plato principal antes del 1 de junio de 2026.",
         items: {
           octopus: "Salmón a la plancha con ensalada",
           chicken: "Fricandó de ternera con arroz",
